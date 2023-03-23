@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Exibir Cliente</title>
+</head>
+<body>
+	
+	<h2>Exibir Cliente</h2>
+	<table>
+		<thead>
+			<th>Nome</th>
+			<th>Idade</th>
+			<th>Documento</th>
+		</thead>
+		<tbody>
+			<tr th:each="cliente : ${clientes}">
+				<td th:text="${cliente.getNome()}"></td>
+				<td th:text="${cliente.getIdade()}"></td>
+				<td th:text="${cliente.getDocumento()}"></td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>
